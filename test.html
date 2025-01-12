@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .start {
+            background: #333;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .start img {
+            max-width: 30%;
+            width: 256px;
+            height: 256px;
+            image-rendering: pixelated;
+            z-index: 5;
+        }
+
+        .start img:nth-child(2) {
+            position: absolute;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="start">
+        <img src="assets/imgs/FirstSee/GrassBlock.png" alt="Bloc d'herbe de Minecraft">
+        <img src="assets/imgs/FirstSee/destroy_stage_-1.png" alt="Animation de cassage de block - Etape 0">
+    </div>
+
+    <script src="assets/js/FirstSee.js"></script>
+</body>
+</html>
