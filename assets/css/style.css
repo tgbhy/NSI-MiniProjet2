@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "Minecraft-Regular";
+    src: url("../fonts/MinecraftRegular-Bmg3.otf");
+}
+
+@font-face {
+    font-family: "Minecraft-Ten";
+    src: url("../fonts/MinecraftTen-VGORe.ttf")
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #222;
+}
+
+/* Toast animation manager */
+@keyframes spawnToast {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 20px;
+    }
+}
+
+@keyframes spawnToastReverse {
+    from {
+        top: 20px;
+    }
+    to {
+        top: -100%;
+    }
+}
+
+.toast {
+    background: #212121;
+    border: 3px solid #555555;
+    border-radius: 7px;
+    outline: 2px solid #000; 
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    min-width: 320px;
+    min-height: 64px;
+    padding: 30px;
+    position: absolute;
+    right: 5px;
+    z-index: 100;
+    top: -100px;
+    animation: 2s spawnToast;
+    animation-fill-mode: both;
+    transition: top 2s ease-out;
+}
+
+.toast.revert {
+    animation: 2s spawnToastReverse;
+    animation-fill-mode: both;
+    top: 20px;
+}
+
+.toast .image img {
+    width: 64px;
+    height: 64px;
+}
+
+.toast .toastContent h1 {
+    color: #d7d706;
+}
+
+.toast .toastContent p {
+    color: white;
+}
+/* End ~ Toast animation manager */
+
+/* Start image (The breaking-able block) */
+.start {
+    background: #333;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start img {
+    max-width: 30%;
+    max-height: 60%;
+    object-fit: cover;
+    width: 256px;
+    height: 256px;
+    image-rendering: pixelated;
+    z-index: 5;
+}
+
+.start img:nth-child(2) {
+    position: absolute;
+    z-index: 10;
+}
+
+.content {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    /* Garder l'élément toujours visible sur l'écran */
+    top: 20px;
+    left: 50%;
+    /* Déplacement de 50% vers la droite à partir du bord gauche */
+    transform: translateX(-50%);
+    /* Déplacement de 50% vers la droite selon la taille de l'élément (width) */
+    width: 70%;
+    height: 17%;
+    background: #333;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30%;
+    animation: navBarAnimation 5s 1;
+}
+
+@keyframes navBarAnimation {
+    0% {
+        margin-top: -15%;
+        top: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        top: 20px;
+    }
+}
+
+nav .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .links {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+nav .links li a {
+    color: white;
+    font-family: 'Minecraft-Regular', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav .links li a:hover {
+    text-decoration: underline white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+table {
+    border-collapse: collapse;
+    color: white;
+    background: #333;
+    border: 2px solid #222;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-family: 'Satoshi', sans-serif !important;
+}
+
+caption {
+    caption-side: top;
+    padding: 10px;
+    font-family: 'Minecraft-Ten', sans-serif;
+    font-size: 20px;
+}
+
+th, td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+}
+
+td:last-of-type {
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    background: #444;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 6vw;
+    border-radius: 20px 20px 0 0;
+}

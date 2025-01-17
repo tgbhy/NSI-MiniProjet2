@@ -1,44 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Steve & Alex ~ Minecraft</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-            }
 
-            nav {
-                position: fixed; /* Garder l'élément toujours visible sur l'écran */
-                top: 20px; /* Créer un décalage de 20px depuis le haut de la page */
-                left: 50%; /* Déplacement de 50% vers la droite à partir du bord gauche */
-                transform: translateX(-50%); /* Déplacement de 50% vers la droite selon la taille de l'élément (width) */
-                width: 70%;
-                height: 15%;
-                background: #333;
-                border-radius: 30px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 40%;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve & Alex ~ Minecraft</title>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-            nav .logo {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
+<body>
+    <div class="start">
+        <img src="assets/imgs/FirstSee/GrassBlock.png" alt="Bloc d'herbe de Minecraft">
+        <img src="assets/imgs/FirstSee/destroy_stage_-1.png" alt="Animation de cassage de block - Etape 0">
+    </div>
 
-            nav .links {
-                display: flex;
-                list-style-type: none;
-            }
-        </style>
-    </head>
-    <body>
+    <div class="content">
         <nav>
             <!-- Barre de navigation global -->
             <div class="logo">
@@ -46,7 +23,8 @@
             </div>
 
             <ul class="links">
-                <li>Page principal</li>
+                <li><a href="index.html">Page principal</a></li>
+                <li><a href="abilities.html">Caractéristiques</a></li>
             </ul>
         </nav>
         <main>
@@ -55,7 +33,13 @@
         </main>
         <footer>
             <!-- Contenu des informations global du site -->
-            
+
         </footer>
-    </body>
+    </div>
+
+    
+    <script src="assets/js/FirstSee.js"></script>
+    <script src="assets/js/MinecraftToast.js"></script>
+</body>
+
 </html>

@@ -10,35 +10,79 @@
             padding: 0;
         }
 
-        .start {
-            background: #333;
-            height: 100vh;
-            width: 100%;
+        @keyframes spawnToast {
+            0% {
+                top: -100%;
+            }
+
+            100% {
+                top: 5px;
+            }
+        }
+
+        @keyframes spawnToastReverse {
+            0% {
+                top: 5px;
+            }
+
+            100% {
+                top: -100%;
+            }
+        }
+
+        .toast {
+            background: #212121;
+            border: 3px solid #555555;
+            border-radius: 7px;
+            outline: 2px solid #000; 
+            font-weight: bold;
             display: flex;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
-        }
-
-        .start img {
-            max-width: 30%;
-            width: 256px;
-            height: 256px;
-            image-rendering: pixelated;
-            z-index: 5;
-        }
-
-        .start img:nth-child(2) {
+            gap: 20px;
+            width: fit-content;
+            min-width: 320px;
+            min-height: 64px;
+            padding: 30px;
             position: absolute;
-            z-index: 10;
+            right: 5px;
+            animation: 2s spawnToast;
+            animation-fill-mode: forwards;
+        }
+
+        .toast.revert {
+            animation: 2s spawnToastReverse;
+            animation-fill-mode: forwards;
+        }
+
+        .toast .image img {
+            width: 64px;
+            height: 64px;
+        }
+
+        .toast .content h1 {
+            color: #d7d706;
+        }
+
+        .toast .content p {
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="start">
-        <img src="assets/imgs/FirstSee/GrassBlock.png" alt="Bloc d'herbe de Minecraft">
-        <img src="assets/imgs/FirstSee/destroy_stage_-1.png" alt="Animation de cassage de block - Etape 0">
+    <!--
+    <div class="toast">
+        <div class="image">
+            <img src="assets/imgs/Toast.png" alt="Image de toast">
+        </div>
+        <div class="content">
+            <h1>Name</h1>
+            <p>Description</p>
+        </div>
     </div>
+    -->
 
-    <script src="assets/js/FirstSee.js"></script>
+    <button onclick="ShowToast('test', 'test')">Test</button>
+    <script src="assets/js/MinecraftToast.js"></script>
 </body>
 </html>
