@@ -173,6 +173,19 @@ main {
     height: 100vh;
 }
 
+.indexMain {
+    color: white;
+    gap: 15px;
+}
+
+.indexMain {
+    margin-bottom: 30px;
+}
+
+.indexMain p {
+    font-size: 18px;
+}
+
 table {
     border-collapse: collapse;
     color: white;
