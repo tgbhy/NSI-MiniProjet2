@@ -68,6 +68,7 @@ body {
 .toast .image img {
     width: 64px;
     height: 64px;
+    image-rendering: pixelated;
 }
 
 .toast .toastContent h1 {

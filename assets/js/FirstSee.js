@@ -118,6 +118,7 @@ function explodeImage() {
         startDiv.remove();
         document.body.style.overflow = "visible";
         divContent.style.display = "block";
-        ShowToast("Destruction", "Détruisez le bloc présent sur le site !");
+        MinecraftToastManager.ShowToast("BreakStartBlock", "Destruction", "Détruisez le bloc présent sur le site !");
+        MinecraftToastManager.ShowToast("SeeIndexPage", "Présentation", "Visionnez le contenu de la page principale.")
     }, 1000);
 }

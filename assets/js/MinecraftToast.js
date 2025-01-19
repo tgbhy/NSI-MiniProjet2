@@ -4,13 +4,16 @@ class MinecraftToast {
         this.isProcessing = false;
     }
 
-    ShowToast(id, name, description, image = "FirstPage.png") {
-        if (localStorage.getItem('Achievements').split(',').includes(id)) return;
+    ShowToast(id, name, description) {
+        console.log(!localStorage.getItem('Achievements') == null);
+        console.log(localStorage.getItem('Achievements').split(',').includes(id));
+        if (localStorage.getItem('Achievements') == null || localStorage.getItem('Achievements').split(',').includes(id)) return;
         localStorage.setItem('Achievements', localStorage.getItem('Achievements') + "," + id);
+        let image = id + ".png";
         return new Promise((resolve) => {
             this.queue.push({ name, description, image, resolve });
             if (!this.isProcessing) {
-              this.processQueue();
+                this.processQueue();
             }
         });
     }
@@ -69,4 +72,5 @@ class MinecraftToast {
     }
 }
 
+localStorage.setItem('Achievements', '');
 const MinecraftToastManager = new MinecraftToast();
