@@ -91,8 +91,6 @@ body {
 }
 
 .start img {
-    max-width: 30%;
-    max-height: 60%;
     object-fit: cover;
     width: 256px;
     height: 256px;
