@@ -23,7 +23,6 @@ function mineGrassBlock() {
     if (interval !== null) return;
 
     function upgradeStage() {
-        console.log("Upgrade !");
         currentStage++;
 
         if (currentStage >= maxStage) {
