@@ -28,13 +28,13 @@ Un exemple d'utilisation peut être trouvé [ici](https://github.com/tgbhy/NSI-M
 
 ## Promise
 Une **Promise**, en JavaScript, permet d'exécuter des actions de manière __asynchrone__.
-Ce qui veut dire que la Promise permet la continuation de l'exécution du code tant que la Promise n'est pas **résolu**.
+Ce qui veut dire que la Promise permet la continuation de l'exécution du code tant que la Promise **n'est pas résolu**.
 
 En effet, une Promise est composée de **3 états**:
-- Pending : Cette état permet de dire que la Promise est en attente d'une réponse ou d'un rejet
-- Fulfilled : Cette état permet de dire que la Promise s'est terminée correctement
-- Rejected : Cette état permet de dire que la Promise a fait face à une erreur.
+- **Pending** : Cette état permet de dire que la Promise est en attente d'une réponse ou d'un rejet
+- **Fulfilled** : Cette état permet de dire que la Promise s'est terminée correctement
+- **Rejected** : Cette état permet de dire que la Promise a fait face à une erreur.
 
 Ces états permettent au développeur de faire une action selon le résultat de manière simple et compréhensible.
 Les Promises peuvent aussi, comme ici, être utilisé pour avoir des files d'attente grâce au mot clé **await** qui permet d'avoir une action qui devra se terminer avant de continuer dans le code.
-Voir 
+Voir le fichier [MinecraftToast.js](https://github.com/tgbhy/NSI-MiniProjet2/blob/main/assets/js/MinecraftToast.js) aux lignes [11](https://github.com/tgbhy/NSI-MiniProjet2/blob/main/assets/js/MinecraftToast.js#L11) et [36](https://github.com/tgbhy/NSI-MiniProjet2/blob/4ebfc9e3ddd6a1bc1b7451483a24fbc2ebf7da82/assets/js/MinecraftToast.js#L36) pour un exemple d'utilisation.
