@@ -8,13 +8,13 @@ Le "LocalStorage" ou le "Stockage local" est une fonctionnalitée, offerte par l
 Ici, nous en avons eu l'utilité pour sauvegarder les données des **Succès** (Voir plus bas) et sauvegarder la progression de l'utilisateur dans le site.
 
 ### Comment voir les données du Stockage Local qui sont sauvegarder sur mon navigateur ?
-Pour voir et modifier les données qui sont stockées sur votre navigateur, vous pouvez vous rendre dans le **DevTools** (Clique droit => Inspecter OU Combinaison Ctrl+Maj+I sur le navigateur)
-![Exemple dev Tools](assets/imgs/readme/devTools.png);
+Pour voir et modifier les données qui sont stockées sur votre navigateur, vous pouvez vous rendre dans le **DevTools** (Clique droit => Inspecter OU Combinaison Ctrl+Maj+I sur le navigateur)\
+![Exemple dev Tools](assets/imgs/readme/devTools.png)\
 Pour y accéder, nous nous sommes diriger dans "Applications" puis "Local Storage" (La langue peut changer selon votre configuration). Vous pouvez le voir grâce aux éléments jaunis.
 
 Nous voyons que pour le moment, nous avons débloquer 2 succès qui sont : BreakStartBlock (Destruction) et SeeIndexPage (Présentation) !
-En JavaScript, pour modifier ces données, nous pouvons utiliser `localStorage` pour accéder aux méthodes disponible.
-![LocalStorage](assets/imgs/readme/localStorage.png)
+En JavaScript, pour modifier ces données, nous pouvons utiliser `localStorage` pour accéder aux méthodes disponible.\
+![LocalStorage](assets/imgs/readme/localStorage.png)\
 Ici, nous voyons **5 méthodes** et **une propriété** :
 - **setItem** : Cette méthode permet de définir la valeur d'un "item" dans le stockage local
 - **getItem** : Cette méthode permet de récupérer la valeur d'un "item" dans le stockage local (attention ce dernier doit exister sinon une valeur __null__ est retournée !)
