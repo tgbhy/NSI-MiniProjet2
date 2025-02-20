@@ -17,7 +17,7 @@ body {
     background: #222;
 }
 
-/* Toast animation manager */
+/* Succès du site */
 @keyframes spawnToast {
     from {
         top: -100%;
@@ -52,7 +52,7 @@ body {
     padding: 30px;
     position: absolute;
     right: 5px;
-    z-index: 100;
+    z-index: 201;
     top: -100px;
     animation: 2s spawnToast;
     animation-fill-mode: both;
@@ -68,7 +68,6 @@ body {
 .toast .image img {
     width: 64px;
     height: 64px;
-    image-rendering: pixelated;
 }
 
 .toast .toastContent h1 {
@@ -78,35 +77,11 @@ body {
 .toast .toastContent p {
     color: white;
 }
-/* End ~ Toast animation manager */
 
-/* Start image (The breaking-able block) */
-.start {
-    background: #333;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.start img {
-    object-fit: cover;
-    width: 256px;
-    height: 256px;
-    image-rendering: pixelated;
-    z-index: 5;
-}
 
-.start img:nth-child(2) {
-    position: absolute;
-    z-index: 10;
-}
 
-.content {
-    display: none;
-}
-
+/* Global */
 nav {
     position: fixed;
     /* Garder l'élément toujours visible sur l'écran */
@@ -125,6 +100,7 @@ nav {
     justify-content: center;
     gap: 30%;
     animation: navBarAnimation 5s 1;
+    z-index: 200;
 }
 
 @keyframes navBarAnimation {
@@ -169,11 +145,54 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding-top: 200px;
 }
 
+footer {
+    position: relative;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    height: 6vw;
+    border-radius: 20px 20px 0 0;
+}
+
+.skin-steve {
+    background-image: url('../imgs/Skins/SteveAvant.png');
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 256px;
+}
+
+.skin-steve:hover {
+    background-image: url('../imgs/Skins/SteveArriere.png');
+}
+
+.skin-alex {
+    background-image: url('../imgs/Skins/AlexAvant.png');
+    width: 128px;
+    height: 256px;
+}
+
+.skin-alex:hover {
+    background-image: url('../imgs/Skins/AlexArriere.png');
+}
+
+img.pixelated {
+    image-rendering: pixelated;
+}
+
+
+
+/* index.html */
 .indexMain {
     color: white;
     gap: 15px;
+    padding-top: 0;
 }
 
 .indexMain h1 {
@@ -191,6 +210,74 @@ main {
     text-decoration: none;
 }
 
+/* Start image (The breaking-able block) */
+.start {
+    background: #333;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start img {
+    object-fit: cover;
+    width: 256px;
+    height: 256px;
+    z-index: 5;
+}
+
+.start img:nth-child(2) {
+    position: absolute;
+    z-index: 10;
+}
+
+.content {
+    display: none;
+}
+
+.content footer {
+    position: absolute; /* Sinon le footer ne s'affiche pas correctement sur la page principal ! */
+}
+
+
+/* Steve.html & Alex.html */
+.presentation {
+    gap: 25px;
+}
+
+.presentation:first-child() {
+    text-align: center;
+}
+
+.element {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: left;
+    margin: 0 60px;
+}
+
+.element > * {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.element h1 {
+    font-size: 35px;
+}
+
+.element p {
+    font-size: 25px;
+}
+
+
+/* abilities.html */
 table {
     border-collapse: collapse;
     color: white;
@@ -217,12 +304,37 @@ td:last-of-type {
     text-align: center;
 }
 
-footer {
-    position: absolute;
-    background: #444;
+/* galery.html */
+.galery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.galery > div {
+    width: 512px;
+    height: 512px;
+    background: #333;
+    margin: 5px;
     display: flex;
-    bottom: 0;
-    width: 100%;
-    height: 6vw;
-    border-radius: 20px 20px 0 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: .25rem;
+}
+
+.galery .galery-image {
+    transform: translateY(-50%);
+}
+
+.galery img {
+    transform: translateY(-50%);
+}
+
+.galery p {
+    color: white;
+    font-size: 25px;
+    text-decoration: underline;
+    margin-bottom: 5px;
 }
